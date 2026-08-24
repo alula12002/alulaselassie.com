@@ -52,7 +52,12 @@
   }
   html,body{margin:0;padding:0}
   body{
-    background:var(--glaze);
+    /* Read, not looked at. Safari 26 derives its bar tint from this property,
+       and measurement across three recordings showed the bars tracking it
+       exactly. The painted canvas is fully opaque and covers the body, so the
+       ink is never actually seen; --glaze remains the value the page falls
+       back to whenever the canvas has not painted (see the noscript below). */
+    background:#2b3336;
     color:var(--ink);
     font-family:'EB Garamond','Iowan Old Style',Palatino,'Palatino Linotype',Georgia,serif;
     -webkit-font-smoothing:antialiased;
@@ -151,7 +156,7 @@
     ul.stories a{flex-direction:column;gap:.15rem;align-items:flex-start}
   }
 </style>
-<noscript><style>#glaze{background:var(--glaze)}</style></noscript>
+<noscript><style>body,#glaze{background:var(--glaze)}</style></noscript>
 </head>
 
 <body>
