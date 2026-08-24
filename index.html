@@ -7,7 +7,7 @@
 <meta name="description" content="Fiction and screenplays by Alula Selassie. Stories in The Maine Review, The Ilanot Review, and Wigleaf, with work nominated for Best American Short Stories.">
 <meta name="author" content="Alula Selassie">
 <link rel="canonical" href="https://alulaselassie.com/">
-<meta name="theme-color" content="#9eb5bb">
+<meta name="theme-color" content="#94adb3">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alula Selassie">
@@ -136,6 +136,21 @@
   footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--seal);text-underline-offset:4px;text-decoration-thickness:1px}
   /* the screenplay request line already gives the address */
   body[data-tab="screenplay"] footer{display:none}
+  /* iOS Safari paints the safe areas with theme-color as a solid bar, over the
+     page - viewport-fit=cover does not stop it, and one flat colour cannot match
+     a gradient at both ends. So fade the glaze into that exact colour instead,
+     turning the hard seam into an invisible join. Both heights are driven by the
+     safe-area insets, so this collapses to nothing on any screen without them. */
+  body::after{
+    content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      linear-gradient(to bottom,
+        #94adb3 env(safe-area-inset-top,0px),
+        rgba(148,173,179,0) calc(env(safe-area-inset-top,0px) * 3)),
+      linear-gradient(to top,
+        #94adb3 calc(env(safe-area-inset-bottom,0px) * 1.4),
+        rgba(148,173,179,0) calc(env(safe-area-inset-bottom,0px) * 4.5));
+  }
   ::selection{background:rgba(160,61,45,.22)}
   a:focus-visible,.tab:focus-visible{outline:1.5px solid var(--seal);outline-offset:3px;border-radius:2px}
   @media (prefers-reduced-motion:no-preference){
