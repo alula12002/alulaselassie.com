@@ -49,6 +49,12 @@
     --muted:#3a474d;
     --seal:#a03d2d;
     --line:rgba(43,51,54,.17);
+    /* The two longest passages on the page. EB Garamond's x-height is 40.5 per
+       100px against Palatino's 47.1, so it renders ~16% smaller than its
+       nominal size and reads cramped on a phone. These two run in the taller
+       face, a shade darker, for legibility at length. */
+    --muted-strong:#333e45;
+    --serif-read:'Iowan Old Style',Palatino,'Palatino Linotype',Georgia,serif;
   }
   html,body{margin:0;padding:0}
   body{
@@ -95,8 +101,9 @@
     margin-left:.34em;transform:translateY(-.04em);
   }
   .tagline{
-    margin:1.05rem 0 0;font-style:normal;font-size:1.05rem;line-height:1.65;
-    color:var(--muted);
+    margin:1.05rem 0 0;font-family:var(--serif-read);
+    font-style:normal;font-size:1.1rem;line-height:1.6;
+    color:var(--muted-strong);
   }
   .tagline cite{font-style:italic} /* titles italic inside a roman line */
   nav{
@@ -130,8 +137,9 @@
   .sp{display:block;padding:.95rem .1rem}
   .sp .t{display:block;font-style:normal;font-weight:600}
   .logline{
-    margin:.4rem 0 0;font-style:italic;font-size:1rem;line-height:1.6;
-    color:var(--muted);
+    margin:.4rem 0 0;font-family:var(--serif-read);
+    font-style:normal;font-size:1.03rem;line-height:1.62;
+    color:var(--muted-strong);
   }
   .request{
     margin:2.4rem 0 0;font-size:.8rem;line-height:1.85;
