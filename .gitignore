@@ -1,0 +1,10 @@
+# Reference photo used while matching the glaze by eye. Not part of the site:
+# anything committed here is published at the domain root.
+Clevelandart_1957.40.jpg
+
+# Byte-identical older copy of index.html. Only index.html ships.
+ru-glaze-mock.html
+
+# Local preview config
+.claude/
+.DS_Store

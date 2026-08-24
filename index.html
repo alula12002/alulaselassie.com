@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alula Selassie — Writer</title>
+<meta name="description" content="Fiction and screenplays by Alula Selassie. Stories in The Maine Review, The Ilanot Review, and Wigleaf, with work nominated for Best American Short Stories.">
+<meta name="author" content="Alula Selassie">
+<link rel="canonical" href="https://alulaselassie.com/">
+<meta name="theme-color" content="#a9bcbb">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alula Selassie">
+<meta property="og:title" content="Alula Selassie — Writer">
+<meta property="og:description" content="Fiction and screenplays by Alula Selassie. Stories in The Maine Review, The Ilanot Review, and Wigleaf, with work nominated for Best American Short Stories.">
+<meta property="og:url" content="https://alulaselassie.com/">
+<meta property="og:image" content="https://alulaselassie.com/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alula Selassie, writer — name set over a pale celadon crackle-glaze background.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alula Selassie — Writer">
+<meta name="twitter:description" content="Fiction and screenplays by Alula Selassie. Stories in The Maine Review, The Ilanot Review, and Wigleaf, with work nominated for Best American Short Stories.">
+<meta name="twitter:image" content="https://alulaselassie.com/preview.jpg">
+<meta name="twitter:image:alt" content="Alula Selassie, writer — name set over a pale celadon crackle-glaze background.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMic+PHJlY3Qgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJyBmaWxsPScjYTliY2JiJy8+PHJlY3QgeD0nMTAnIHk9JzEwJyB3aWR0aD0nMTInIGhlaWdodD0nMTInIHJ4PScxJyBmaWxsPScjYTAzZDJkJy8+PC9zdmc+">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAM0lEQVR42mNYuWc3TRHDqAWjFoxaMOAWLLDVJYhGLRi1YNSCUQtobcFocT1qwagFQ8ICANZ65AoLW1MCAAAAAElFTkSuQmCC">
+
+<link rel="preload" href="eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="eb-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* EB Garamond, self-hosted: no third-party request, no render-blocking
+     external stylesheet. SIL Open Font License 1.1 - see OFL.txt.
+     The roman file is the variable font, so one file covers 400/500/600. */
+  @font-face{
+    font-family:'EB Garamond';font-style:normal;font-weight:400 600;
+    font-display:swap;src:url(eb-garamond-latin.woff2) format('woff2');
+  }
+  @font-face{
+    font-family:'EB Garamond';font-style:italic;font-weight:400;
+    font-display:swap;src:url(eb-garamond-latin-italic.woff2) format('woff2');
+  }
+  :root{
+    --glaze:#a9bcbb;
+    --ink:#2b3336;
+    --muted:#3a474d;
+    --seal:#a03d2d;
+    --line:rgba(43,51,54,.17);
+  }
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--glaze);
+    color:var(--ink);
+    font-family:'EB Garamond','Iowan Old Style',Palatino,'Palatino Linotype',Georgia,serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  #glaze{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100lvh;z-index:0}
+  main{
+    position:relative;z-index:1;
+    max-width:41rem;margin:0 auto;
+    padding:clamp(4.5rem,13vh,8.5rem) clamp(1.4rem,6vw,2.5rem) 5.5rem;
+  }
+  header h1{
+    font-size:clamp(2.2rem,5.5vw,2.85rem);
+    font-weight:500;letter-spacing:.012em;line-height:1.12;
+    margin:0;text-wrap:balance;
+  }
+  .seal{
+    display:inline-block;width:.32em;height:.32em;
+    background:var(--seal);border-radius:.06em;
+    margin-left:.34em;transform:translateY(-.04em);
+  }
+  .tagline{
+    margin:1.05rem 0 0;font-style:normal;font-size:1.05rem;line-height:1.65;
+    color:var(--muted);
+  }
+  .tagline cite{font-style:italic} /* titles italic inside a roman line */
+  nav{
+    margin-top:2.2rem;display:flex;gap:1rem;align-items:baseline;
+    font-size:.8rem;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);
+  }
+  .tab{
+    font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;
+    background:none;border:0;padding:0;cursor:pointer;position:relative;
+  }
+  /* the tab text is only 17px tall - too small to hit reliably on a phone.
+     This invisible overlay lifts the touch target to ~45px. It is absolutely
+     positioned inside the button, so it moves nothing on the page. */
+  .tab::before{content:'';position:absolute;top:-14px;bottom:-14px;left:-6px;right:-6px}
+  .tab:hover{color:var(--ink)}
+  .tab[aria-selected="true"]{
+    color:var(--ink);text-decoration:underline;text-decoration-color:var(--seal);
+    text-underline-offset:5px;text-decoration-thickness:1px;
+  }
+  nav .dot{opacity:.45}
+  .panel{margin-top:2.6rem;min-height:38vh}
+  ul.stories{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+  ul.stories li{border-top:1px solid var(--line)}
+  ul.stories a{
+    display:flex;justify-content:space-between;align-items:center;gap:1.2rem;
+    padding:.95rem .1rem;color:inherit;text-decoration:none;
+  }
+  .t{font-size:1.28rem;font-style:italic;font-weight:400;line-height:1.35}
+  .tw{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+  .n{font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+  .sp{display:block;padding:.95rem .1rem}
+  .sp .t{display:block;font-style:normal;font-weight:600}
+  .logline{
+    margin:.4rem 0 0;font-style:italic;font-size:1rem;line-height:1.6;
+    color:var(--muted);
+  }
+  .request{
+    margin:2.4rem 0 0;font-size:.8rem;line-height:1.85;
+    letter-spacing:.055em;color:var(--muted);
+  }
+  .request a{color:inherit;text-decoration:underline;text-decoration-color:var(--seal);text-underline-offset:4px;text-decoration-thickness:1px}
+  .request a:hover{color:var(--ink)}
+  ul.stories a:hover .t{text-decoration:underline;text-decoration-color:var(--seal);text-underline-offset:4px;text-decoration-thickness:1px}
+  .d{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  footer{margin-top:5.5rem;font-size:.8rem;letter-spacing:.06em;color:var(--muted)}
+  footer a{color:inherit;text-decoration:none}
+  footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--seal);text-underline-offset:4px;text-decoration-thickness:1px}
+  /* the screenplay request line already gives the address */
+  body[data-tab="screenplay"] footer{display:none}
+  ::selection{background:rgba(160,61,45,.22)}
+  a:focus-visible,.tab:focus-visible{outline:1.5px solid var(--seal);outline-offset:3px;border-radius:2px}
+  @media (prefers-reduced-motion:no-preference){
+    main{animation:rise .6s ease both}
+    @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  }
+  @media (max-width:540px){
+    ul.stories a{flex-direction:column;gap:.15rem;align-items:flex-start}
+  }
+</style>
+</head>
+
+<body>
+
+<canvas id="glaze" aria-hidden="true"></canvas>
+
+<main>
+  <header>
+    <h1>alula selassie<span class="seal" aria-hidden="true"></span></h1>
+    <p class="tagline">Inspirations from <cite>Dream of the Red Chamber</cite> to <cite>36 Chambers</cite></p>
+    <nav role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" id="tab-fiction" aria-controls="panel-fiction" aria-selected="true">Fiction</button>
+      <span class="dot" aria-hidden="true">&middot;</span>
+      <button class="tab" role="tab" id="tab-screenplay" aria-controls="panel-screenplay" aria-selected="false" tabindex="-1">Screenplays</button>
+    </nav>
+  </header>
+
+  <section class="panel" id="panel-fiction" role="tabpanel" aria-labelledby="tab-fiction">
+    <ul class="stories">
+      <li><a href="https://www.mainereview.com/red-mansions/" target="_blank" rel="noopener"><span class="t">Red Mansions</span><span class="d">The Maine Review</span></a></li>
+      <li><a href="https://web.archive.org/web/20251007045545/http://www.ilanotreview.com/fixations/make-roads-glad-us/" target="_blank" rel="noopener"><span class="tw"><span class="t">Make Your Roads Glad for Us</span><span class="n">Nominated &middot; 2025 Best American Short Stories &middot; 2026 Best of the Net</span></span><span class="d">The Ilanot Review</span></a></li>
+      <li><a href="https://wigleaf.com/202510inherited.htm" target="_blank" rel="noopener"><span class="t">The Inherited</span><span class="d">Wigleaf</span></a></li>
+    </ul>
+  </section>
+
+  <section class="panel" id="panel-screenplay" role="tabpanel" aria-labelledby="tab-screenplay" hidden>
+    <ul class="stories">
+      <li>
+        <div class="sp">
+          <span class="t">the cause</span>
+          <p class="logline">During the American Revolution, a runaway slave becomes a spy for a Loyalist guerrilla leader and joins the hunt for a notorious Patriot militia captain&#8288;&mdash;even as her brother decides to fight for the Americans.</p>
+        </div>
+      </li>
+      <li>
+        <div class="sp">
+          <span class="t">Untitled</span>
+          <p class="logline">Work in progress</p>
+        </div>
+      </li>
+    </ul>
+    <p class="request">Available to read on request: <a href="mailto:alula.selassie@gmail.com?subject=Reading%20request">alula.selassie@gmail.com</a></p>
+  </section>
+
+  <footer><a href="mailto:alula.selassie@gmail.com">alula.selassie@gmail.com</a></footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  var cv = document.getElementById('glaze');
+  var ctx = cv.getContext('2d');
+  // one crackle per visit: a fresh pattern each time the page is loaded,
+  // but fixed for the life of that visit (resizing keeps the same glaze)
+  var seed = (Math.random() * 4294967296) >>> 0;
+  var W = 0, H = 0;
+
+  function mulberry32(a){
+    return function(){
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      var t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  function measure(){
+    var r = cv.getBoundingClientRect();
+    var w = Math.max(r.width, document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    var h = Math.max(r.height, document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    return [Math.max(64, Math.round(w)), Math.max(64, Math.round(h))];
+  }
+  var painted = '';
+
+  function paint(){
+    var m = measure();
+    W = m[0];
+    H = m[1];
+    painted = W + 'x' + H;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * dpr);
+    cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    var rng = mulberry32(seed);
+    // finishing layers (specks, pinholes, grain) draw from their own stream,
+    // so the overlay layers cannot shift them out of register
+    var rng2 = mulberry32((seed ^ 0x9e3779b9) >>> 0);
+
+    // ---- low-frequency value fields (for patchy crackle density) ----
+    function makeField(gw, gh){
+      var g = new Float32Array(gw * gh);
+      for (var i = 0; i < g.length; i++) g[i] = rng();
+      return function(u, v){
+        var x = Math.min(Math.max(u, 0), 1) * (gw - 1);
+        var y = Math.min(Math.max(v, 0), 1) * (gh - 1);
+        var x0 = Math.floor(x), y0 = Math.floor(y);
+        var x1 = Math.min(x0 + 1, gw - 1), y1 = Math.min(y0 + 1, gh - 1);
+        var fx = x - x0, fy = y - y0;
+        fx = fx * fx * (3 - 2 * fx); fy = fy * fy * (3 - 2 * fy);
+        var a = g[y0 * gw + x0], b = g[y0 * gw + x1];
+        var c = g[y1 * gw + x0], d = g[y1 * gw + x1];
+        return (a + (b - a) * fx) + ((c + (d - c) * fx) - (a + (b - a) * fx)) * fy;
+      };
+    }
+    var fFine = makeField(7, 5);
+    var fMid  = makeField(11, 8);
+
+    // ---- base glaze ----
+    var lg = ctx.createLinearGradient(0, 0, W * 0.12, H);
+    lg.addColorStop(0, '#b3c6c9');
+    lg.addColorStop(0.5, '#a5bbbf');
+    lg.addColorStop(1, '#97aeb3');
+    ctx.fillStyle = lg;
+    ctx.fillRect(0, 0, W, H);
+
+    // ---- tonal clouds (glaze thickness variation) ----
+    function mottle(r, g, b, aMax, gw, gh, gamma){
+      var c = document.createElement('canvas');
+      c.width = gw; c.height = gh;
+      var x = c.getContext('2d');
+      var im = x.createImageData(gw, gh);
+      for (var i = 0; i < gw * gh; i++){
+        var v = Math.pow(rng(), gamma);
+        im.data[i * 4] = r; im.data[i * 4 + 1] = g; im.data[i * 4 + 2] = b;
+        im.data[i * 4 + 3] = Math.round(v * aMax * 255);
+      }
+      x.putImageData(im, 0, 0);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(c, -W * 0.07, -H * 0.07, W * 1.14, H * 1.14);
+    }
+    // turquoise clouds, bluer blues drifting through, and broad milky
+    // blooms where the glaze runs thick
+    mottle(88, 148, 168, 0.13, 9, 6, 1.6);
+    mottle(64, 138, 175, 0.13, 13, 9, 2.3);   // the bluer blues, here and there
+    mottle(60, 105, 122, 0.08, 7, 5, 2.0);
+    mottle(226, 240, 242, 0.12, 5, 4, 2.2);   // milky thick-glaze blooms
+    mottle(235, 242, 243, 0.06, 26, 18, 1.2); // fine surface variation
+
+    // ---- crackle network ----
+    // Glaze crackle is a hierarchy: the surface breaks into large plates,
+    // and each plate breaks again into smaller ones. Model exactly that:
+    // recursive cell subdivision, so every crack begins and ends on an
+    // older crack (T-junctions) and the net is always closed.
+    function polyPerim(poly){
+      var n = poly.length, cum = [0];
+      for (var i = 0; i < n; i++){
+        var q = poly[(i + 1) % n];
+        cum.push(cum[i] + Math.hypot(q[0] - poly[i][0], q[1] - poly[i][1]));
+      }
+      return cum; // length n+1, cum[n] = total
+    }
+    function pointOnPoly(poly, cum, s){
+      var n = poly.length, P = cum[n];
+      s = ((s % P) + P) % P;
+      var i = 0;
+      while (i < n - 1 && cum[i + 1] <= s) i++;
+      var q = poly[(i + 1) % n];
+      var el = cum[i + 1] - cum[i] || 1;
+      var t = (s - cum[i]) / el;
+      return {x: poly[i][0] + (q[0] - poly[i][0]) * t,
+              y: poly[i][1] + (q[1] - poly[i][1]) * t, edge: i};
+    }
+    function arcVerts(poly, i, j){ // vertices strictly between edge i's cut and edge j's cut, forward
+      var n = poly.length, out = [];
+      if (i === j) return out;
+      var k = (i + 1) % n;
+      while (true){ out.push(poly[k]); if (k === j) break; k = (k + 1) % n; }
+      return out;
+    }
+    function shoelace(poly){
+      var a = 0;
+      for (var i = 0; i < poly.length; i++){
+        var q = poly[(i + 1) % poly.length];
+        a += poly[i][0] * q[1] - q[0] * poly[i][1];
+      }
+      return Math.abs(a) / 2;
+    }
+    // a crack path: nearly straight chord with a gentle bow plus small kinks
+    function cutPath(A, B){
+      var dx = B.x - A.x, dy = B.y - A.y;
+      var L = Math.hypot(dx, dy);
+      if (L < 8) return [[A.x, A.y], [B.x, B.y]];
+      var n = Math.max(2, Math.round(L / 9));
+      var nx = -dy / L, ny = dx / L;
+      var waves = 1 + Math.floor(rng() * 2) + (L > 250 ? 1 : 0);
+      // short plate edges curve more, for a scale-like grain
+      var bendMul = L < 120 ? 1.8 : 1;
+      var bendAmp = L * (0.02 + rng() * 0.05) * bendMul * (rng() < 0.5 ? -1 : 1);
+      var kinkAmp = Math.min(4, 0.8 + L * 0.014);
+      var pts = [[A.x, A.y]], kink = 0;
+      for (var i = 1; i < n; i++){
+        var t = i / n;
+        if (rng() < 0.4) kink += (rng() - 0.5) * 2 * kinkAmp;
+        kink *= 0.8;
+        var off = Math.sin(Math.PI * t * waves) * bendAmp + kink;
+        pts.push([A.x + dx * t + nx * off, A.y + dy * t + ny * off]);
+      }
+      pts.push([B.x, B.y]);
+      return pts;
+    }
+    function splitCell(poly, parentArea){
+      var cum = polyPerim(poly), P = cum[poly.length];
+      var best = null;
+      for (var tries = 0; tries < 10; tries++){
+        var s1 = rng() * P;
+        var s2 = s1 + P * (0.5 + (rng() - 0.5) * 0.3);
+        var A = pointOnPoly(poly, cum, s1), B = pointOnPoly(poly, cum, s2);
+        if (A.edge === B.edge) continue;
+        var cut = cutPath(A, B);
+        var inner = cut.slice(1, cut.length - 1);
+        var fwd = arcVerts(poly, A.edge, B.edge);
+        var bwd = arcVerts(poly, B.edge, A.edge);
+        var c1 = [[A.x, A.y]].concat(fwd, [[B.x, B.y]], inner.slice().reverse());
+        var c2 = [[B.x, B.y]].concat(bwd, [[A.x, A.y]], inner);
+        var a1 = shoelace(c1), a2 = shoelace(c2);
+        if (Math.min(a1, a2) < parentArea * (tries < 5 ? 0.24 : 0.12)) continue;
+        var chord = Math.hypot(B.x - A.x, B.y - A.y);
+        if (!best || chord < best.chord) best = {cut: cut, c1: c1, c2: c2, chord: chord};
+        if (tries >= 4 && best) break;
+      }
+      return best;
+    }
+
+    var cracks = [];
+    var pad = 10;
+    var live = [[[-pad, -pad], [W + pad, -pad], [W + pad, H + pad], [-pad, H + pad]]];
+    var cells = [];
+    var guard = 0;
+    // the budget must scale with area: glaze II consumes ~1 pop per ~150 css px^2
+    var guardMax = Math.max(20000, Math.ceil(W * H / 60));
+    while (live.length && guard++ < guardMax){
+      var poly = live.pop();
+      var area = shoelace(poly);
+      var cx = 0, cy = 0;
+      for (var v = 0; v < poly.length; v++){ cx += poly[v][0]; cy += poly[v][1]; }
+      cx /= poly.length; cy /= poly.length;
+      var f = fFine(cx / W, cy / H);
+      // Ru crackle is uniform and diffused: near-constant plate size,
+      // only a gentle drift, and an occasional plate left one size larger.
+      // Glaze II breaks into distinctly smaller plates, like crushed ice.
+      var thr = 340 + 240 * f;
+      // an occasional plate may stay one size larger - but only when it is
+      // already near final size. An unconditional lottery here once let
+      // half-screen cells survive unsplit, which glaze IV painted as huge
+      // flat wedges on large viewports.
+      var stopP = 0.02;
+      if (area < thr || (area < thr * 3 && rng() < stopP)){
+        cells.push(poly); continue;
+      }
+      var sp = splitCell(poly, area);
+      if (!sp){
+        // oversized plates keep getting fresh random cuts; the bigger the
+        // cell, the harder we refuse to give up on splitting it
+        var cap = area > thr * 8 ? 14 : 3;
+        if (area > thr * 3 && (poly.__r = (poly.__r || 0) + 1) <= cap) live.unshift(poly);
+        else cells.push(poly);
+        continue;
+      }
+      var tier = sp.chord > Math.min(W, H) * 0.5 ? 0 : (sp.chord > 55 ? 1 : 2);
+      cracks.push({pts: sp.cut, tier: tier});
+      live.push(sp.c1, sp.c2);
+    }
+    // if the budget ever runs dry, keep the leftovers as oversized plates
+    // rather than dropping them - a bare patch is the unforgivable defect
+    while (live.length) cells.push(live.pop());
+    function strokePoly(pts, i0, i1, w, style){
+      if (i1 <= i0) return;
+      ctx.beginPath();
+      ctx.moveTo(pts[i0][0], pts[i0][1]);
+      for (var i = i0 + 1; i <= i1; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+      ctx.lineWidth = w; ctx.strokeStyle = style; ctx.stroke();
+    }
+      // Every plate is rendered as its own piece of glaze Every plate is rendered as its
+      // own small piece of glaze - its own faint tint, its own lit edge, its
+      // own worn boundary, each side of a shared wall struck separately with
+      // its own jitter. A long ancestral crack thereby dissolves into
+      // plate-length touches and can never read as one hair-like strand;
+      // coverage is uniform because every plate draws itself.
+      var jcells = [];
+      for (var jc = 0; jc < cells.length; jc++){
+        var srcp = cells[jc], jp = [];
+        for (var jv = 0; jv < srcp.length; jv++){
+          jp.push([srcp[jv][0] + (rng() - 0.5) * 0.9,
+                   srcp[jv][1] + (rng() - 0.5) * 0.9]);
+        }
+        jcells.push(jp);
+      }
+      var cellPath = function(p){
+        ctx.beginPath();
+        ctx.moveTo(p[0][0], p[0][1]);
+        for (var i = 1; i < p.length; i++) ctx.lineTo(p[i][0], p[i][1]);
+        ctx.closePath();
+      };
+      // pass 1: the patchwork - neighbouring plates sit a breath apart in tone
+      for (var f1 = 0; f1 < jcells.length; f1++){
+        var tR = rng(), tA = rng();
+        if (tR < 0.42)
+          ctx.fillStyle = 'rgba(238,247,248,' + (tA * 0.055).toFixed(3) + ')';
+        else if (tR < 0.72)
+          ctx.fillStyle = 'rgba(60,132,168,' + (tA * 0.055).toFixed(3) + ')';
+        else continue; // and some plates keep the ground exactly
+        cellPath(jcells[f1]);
+        ctx.fill();
+      }
+      // pass 2: lit lower edge of every plate - the depth of the groove
+      ctx.save(); ctx.translate(0.4, 0.75);
+      for (var f2 = 0; f2 < jcells.length; f2++){
+        cellPath(jcells[f2]);
+        ctx.lineWidth = 0.5;
+        ctx.strokeStyle = 'rgba(248,253,252,' + (0.05 + rng() * 0.05).toFixed(3) + ')';
+        ctx.stroke();
+      }
+      ctx.restore();
+      // pass 3: the boundary itself, softly twice-struck by its two plates
+      for (var f3 = 0; f3 < jcells.length; f3++){
+        cellPath(jcells[f3]);
+        ctx.lineWidth = 0.5;
+        ctx.strokeStyle = 'rgba(50,84,110,' + (0.065 + rng() * 0.08).toFixed(3) + ')';
+        ctx.stroke();
+      }
+      // a quiet weather of deeper blue, drifting over the finished plates
+      mottle(48, 100, 130, 0.10, 7, 5, 2.0);  // broad deeper-blue shading
+      mottle(38, 84, 118, 0.07, 12, 8, 2.6);  // smaller pools, deeper still
+      // scattered iron specks and a few bright pinpricks in the glaze
+      for (var sk = 0; sk < 11; sk++){
+        ctx.beginPath();
+        ctx.arc(rng2() * W, rng2() * H, 0.5 + rng2() * 1.1, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(165,125,75,' + (0.16 + rng2() * 0.22).toFixed(3) + ')';
+        ctx.fill();
+      }
+      for (var pk = 0; pk < 3; pk++){
+        ctx.beginPath();
+        ctx.arc(rng2() * W, rng2() * H, 0.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.4)';
+        ctx.fill();
+      }
+
+    // ---- a few pinholes, as the glaze has ----
+    for (var ph = 0; ph < 3; ph++){
+      var px = rng2() * W, py = rng2() * H, pr = 0.6 + rng2() * 0.7;
+      ctx.beginPath();
+      ctx.arc(px, py, pr, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(48,62,66,0.18)';
+      ctx.fill();
+    }
+
+    // ---- milky depth: a thin veil sinks the crackle under the surface ----
+    // (kept thin enough that it can never wash the crackle out regionally)
+    ctx.fillStyle = 'rgba(244,249,248,0.035)';
+    ctx.fillRect(0, 0, W, H);
+
+    // ---- satin sheen and gentle pooling toward the edges ----
+    var sh = ctx.createRadialGradient(W * 0.44, H * 0.26, 0, W * 0.44, H * 0.26, Math.max(W, H) * 0.75);
+    sh.addColorStop(0, 'rgba(255,255,255,0.10)');
+    sh.addColorStop(0.55, 'rgba(255,255,255,0.03)');
+    sh.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = sh; ctx.fillRect(0, 0, W, H);
+
+    var R = Math.hypot(W, H) / 2;
+    var vg = ctx.createRadialGradient(W / 2, H / 2, R * 0.55, W / 2, H / 2, R * 1.02);
+    vg.addColorStop(0, 'rgba(40,58,64,0)');
+    vg.addColorStop(1, 'rgba(40,58,64,0.11)');
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+
+    // ---- fine grain so the surface reads matte, not digital ----
+    var gt = document.createElement('canvas');
+    gt.width = gt.height = 160;
+    var gx = gt.getContext('2d');
+    var gi = gx.createImageData(160, 160);
+    for (var gp = 0; gp < 160 * 160; gp++){
+      var dark = rng2() < 0.5;
+      gi.data[gp * 4] = dark ? 44 : 240;
+      gi.data[gp * 4 + 1] = dark ? 58 : 246;
+      gi.data[gp * 4 + 2] = dark ? 60 : 245;
+      gi.data[gp * 4 + 3] = Math.round(rng2() * (dark ? 0.09 : 0.07) * 255);
+    }
+    gx.putImageData(gi, 0, 0);
+    ctx.fillStyle = ctx.createPattern(gt, 'repeat');
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  paint();
+
+  // some embeds settle their viewport size after first paint; catch that
+  var checks = 0;
+  (function recheck(){
+    var m = measure();
+    if (m[0] > 64 && m[1] > 64 && (m[0] + 'x' + m[1]) !== painted) paint();
+    if (++checks < 40) requestAnimationFrame(recheck);
+  })();
+
+  var rt;
+  window.addEventListener('resize', function(){
+    clearTimeout(rt);
+    rt = setTimeout(function(){
+      var m = measure();
+      // mobile URL-bar jitter never changes measure() (100lvh + max of three
+      // heights), so any real change in either dimension deserves a repaint
+      if (Math.abs(m[0] - W) < 2 && Math.abs(m[1] - H) < 2) return;
+      paint();
+    }, 150);
+  });
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(o){
+        var on = o === t;
+        o.setAttribute('aria-selected', on ? 'true' : 'false');
+        o.tabIndex = on ? 0 : -1;
+        document.getElementById(o.getAttribute('aria-controls')).hidden = !on;
+      });
+      document.body.setAttribute('data-tab',
+        t.id === 'tab-screenplay' ? 'screenplay' : 'fiction');
+    });
+  });
+  document.body.setAttribute('data-tab', 'fiction');
+  // the arrow-key movement the tab roles promise to assistive tech
+  document.querySelector('[role="tablist"]').addEventListener('keydown', function(e){
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx < 0) return;
+    var next = tabs[(idx + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    next.focus();
+    next.click();
+    e.preventDefault();
+  });
+})();
+</script>
+
+</body>
+</html>
