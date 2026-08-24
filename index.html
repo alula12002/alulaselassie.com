@@ -58,7 +58,12 @@
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
-  #glaze{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100lvh;z-index:0}
+  /* Safari 26 ignores <meta theme-color>: it tints its bars from the CSS
+     background-color of fixed elements touching the viewport edges. This ink
+     is what turns the bars dark - the canvas bitmap is fully opaque, so the
+     colour itself is never seen once the glaze has painted. The meta tag
+     stays for Chrome, Android and older iOS, which still honour it. */
+  #glaze{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100lvh;z-index:0;background:#2b3336}
   main{
     position:relative;z-index:1;
     max-width:41rem;margin:0 auto;
@@ -146,6 +151,7 @@
     ul.stories a{flex-direction:column;gap:.15rem;align-items:flex-start}
   }
 </style>
+<noscript><style>#glaze{background:var(--glaze)}</style></noscript>
 </head>
 
 <body>
