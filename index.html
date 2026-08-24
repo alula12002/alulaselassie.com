@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alula Selassie — Writer</title>
 <meta name="description" content="Fiction and screenplays by Alula Selassie. Stories in The Maine Review, The Ilanot Review, and Wigleaf, with work nominated for Best American Short Stories.">
 <meta name="author" content="Alula Selassie">
 <link rel="canonical" href="https://alulaselassie.com/">
-<meta name="theme-color" content="#a9bcbb">
+<meta name="theme-color" content="#9eb5bb">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alula Selassie">
@@ -63,6 +63,16 @@
     position:relative;z-index:1;
     max-width:41rem;margin:0 auto;
     padding:clamp(4.5rem,13vh,8.5rem) clamp(1.4rem,6vw,2.5rem) 5.5rem;
+  }
+  /* viewport-fit=cover lets the glaze reach the screen edges; these keep the
+     text out from under the notch and home indicator. Every env() is 0 off
+     a notched device, so nothing moves anywhere else. */
+  @supports (padding:max(0px)){
+    main{
+      padding-left:max(clamp(1.4rem,6vw,2.5rem), env(safe-area-inset-left));
+      padding-right:max(clamp(1.4rem,6vw,2.5rem), env(safe-area-inset-right));
+      padding-bottom:max(5.5rem, calc(env(safe-area-inset-bottom) + 3rem));
+    }
   }
   header h1{
     font-size:clamp(2.2rem,5.5vw,2.85rem);
