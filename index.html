@@ -454,9 +454,9 @@
       for (var f1 = 0; f1 < jcells.length; f1++){
         var tR = rng(), tA = rng();
         if (tR < 0.42)
-          ctx.fillStyle = 'rgba(238,247,248,' + (tA * 0.055).toFixed(3) + ')';
+          ctx.fillStyle = 'rgba(238,247,248,' + (tA * 0.033).toFixed(3) + ')';
         else if (tR < 0.72)
-          ctx.fillStyle = 'rgba(60,132,168,' + (tA * 0.055).toFixed(3) + ')';
+          ctx.fillStyle = 'rgba(60,132,168,' + (tA * 0.033).toFixed(3) + ')';
         else continue; // and some plates keep the ground exactly
         cellPath(jcells[f1]);
         ctx.fill();
@@ -466,7 +466,7 @@
       for (var f2 = 0; f2 < jcells.length; f2++){
         cellPath(jcells[f2]);
         ctx.lineWidth = 0.5;
-        ctx.strokeStyle = 'rgba(248,253,252,' + (0.05 + rng() * 0.05).toFixed(3) + ')';
+        ctx.strokeStyle = 'rgba(248,253,252,' + (0.03 + rng() * 0.03).toFixed(3) + ')';
         ctx.stroke();
       }
       ctx.restore();
@@ -474,7 +474,7 @@
       for (var f3 = 0; f3 < jcells.length; f3++){
         cellPath(jcells[f3]);
         ctx.lineWidth = 0.5;
-        ctx.strokeStyle = 'rgba(50,84,110,' + (0.065 + rng() * 0.08).toFixed(3) + ')';
+        ctx.strokeStyle = 'rgba(50,84,110,' + (0.039 + rng() * 0.048).toFixed(3) + ')';
         ctx.stroke();
       }
       // a quiet weather of deeper blue, drifting over the finished plates
