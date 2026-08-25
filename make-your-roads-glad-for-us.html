@@ -62,11 +62,12 @@
     }
   }
   .back{
-    display:inline-block;margin:0 0 2.6rem;
-    font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;
-    color:var(--muted);text-decoration:none;
+    position:relative;display:inline-block;line-height:0;
+    margin:0 0 2.4rem;color:var(--muted);
   }
-  .back:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--seal);text-underline-offset:4px;text-decoration-thickness:1px}
+  .back:hover{color:var(--seal)}
+  /* the arrow is 22x14; this lifts the touch target to ~44px without moving it */
+  .back::before{content:'';position:absolute;top:-15px;bottom:-15px;left:-14px;right:-14px}
   h1{
     font-size:clamp(1.75rem,4.4vw,2.25rem);
     font-weight:500;font-style:italic;letter-spacing:.01em;line-height:1.2;
@@ -77,6 +78,11 @@
     text-transform:uppercase;color:var(--muted);
   }
   .rule{margin:2.2rem 0 0;border:0;border-top:1px solid var(--line)}
+  /* the seal from the home page, standing in for a section break */
+  .brk{
+    width:7px;height:7px;border:0;border-radius:2px;
+    background:var(--seal);margin:1.9rem auto;
+  }
   article{margin-top:2.2rem}
   article p{
     margin:0 0 1.35rem;font-size:1.09rem;line-height:1.72;color:var(--ink);
@@ -106,7 +112,7 @@
 <div id="ground" aria-hidden="true"></div>
 
 <main>
-  <a class="back" href="/">&larr;&nbsp; Alula Selassie</a>
+  <a class="back" href="/" aria-label="Back to Alula Selassie"><svg width="22" height="14" viewBox="0 0 22 14" fill="none" aria-hidden="true" focusable="false"><path d="M21 7H1.6M1.6 7 7.4 1.2M1.6 7l5.8 5.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
   <header>
     <h1>Make Your Roads Glad for Us</h1>
@@ -120,6 +126,7 @@
     <p>Even though we were identical, boys only gravitated towards her. Probably because they sensed in her a defiance we didn’t share.</p>
     <p>“Our people were the first to worship gods,” our grandfather said. “With such long familiarity comes strain.” Attar ultimately yielded the morning star to Lucifer. Beher, god of the sea, died when we became a landlocked country. Stories about serpent kings who ruled the land and devoured everything that people grew; pagan mysteries imported by merchants and practiced in secret in the forests surrounding our village.</p>
     <p>Ever since various species of human scalped each other for dominance of the highlands, inexplicable occurrences have cropped up like fossils in these hills. The townspeople hardly blinked when Meron’s search party returned from the forest gloom with a series of ailments: vomiting, nose bleeds, lapses in memory. The hyenas laughed unseen. My aunt scoured the woods for several days and nights until she started losing her hair in clumps.</p>
+    <hr class="brk">
     <p>When I first find out that I’m pregnant, I lie awake thinking about armored bugs that sever the tongues of fish and then live in their mouth, gorging on stolen food until the fish wastes away. I crave spiced heaps of crimson beef. In my bones, I sense a presence observing me. Gods or unearthly consciousness, what’s the difference if both are so unfathomable? I feel chained to a rock in the middle of a shoreless ocean.</p>
     <p>The last person to ever see my sister was an outsider named Zelalem. Years later, my uncle told me that he was a student from Addis, hiding from the tentacles of the state. That’s why the night after she disappeared, he came to my mother and not the local police. The shadows of his eyes gave him an impression of the <em>zār</em>. He told her he was driving his cousin’s car up the road behind the school, around noon, when he saw my sister walking along the forest’s edge. He identified the red sweater she left the house with that day, which was really mine. As he drove past, she turned her head and their eyes met for a flying glimpse. Then she turned off the roadside and walked into the woods as if she had a set destination in mind. Days later, Zelalem evaporated from the face of the earth too. My uncle says someone turned him in; our neighbor swears he saw him in America. I have good reason to doubt all that. The secrets in my family are treasured like heirlooms.</p>
     <p>In those days of the terror, the whole country was inclined to keep secrets. The military ruled by the gun the way lions’ teeth both carry young and tear flesh. They foisted clumsy reforms on the people while armed bands invaded homes and snatched them out of their beds. Countless families lost relatives without a trace, stories that will never be told—so what was one more missing village girl?</p>
@@ -132,7 +139,7 @@
   </article>
 
   <footer>
-    First published in <em>The Ilanot Review</em>.<br>
+    First published in <em>The Ilanot Review</em>, June 2024.<br>
     Nominated for the 2025 Best American Short Stories and the 2026 Best of the Net.
   </footer>
 </main>
